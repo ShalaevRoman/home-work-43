@@ -1,0 +1,51 @@
+.dashboard {
+  min-height: 100svh;
+  padding: 32px;
+  box-sizing: border-box;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.dashboard--light {
+  background-color: #ffffff;
+  color: #1a1a1a;
+}
+
+.dashboard--dark {
+  background-color: #16171d;
+  color: #f3f4f6;
+}
+
+.dashboard__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.user-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.user-profile {
+  border-radius: 8px;
+  padding: 16px;
+  border: 1px solid transparent;
+}
+
+.user-profile--light {
+  background-color: #f4f3ec;
+  border-color: #e5e4e7;
+}
+
+.user-profile--dark {
+  background-color: #1f2028;
+  border-color: #2e303a;
+}
+
+.user-profile-details {
+  margin-top: 8px;
+  font-size: 14px;
+  opacity: 0.8;
+}
