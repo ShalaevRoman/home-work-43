@@ -34,5 +34,5 @@ npm run build
 
 ## Посилання на проект
 
-- Демо: буде додано після деплою на Vercel
+- Демо: https://home-work-43-three.vercel.app
 - GitHub: https://github.com/ShalaevRoman/home-work-43
