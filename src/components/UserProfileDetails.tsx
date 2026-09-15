@@ -1,12 +1,12 @@
 import { memo } from 'react'
-import { useAppContext } from '../hooks/useAppContext'
+import { useAppSelector } from '../redux/hooks'
 import type { UserProfileDetailsProps } from '../types/components'
 
 export const UserProfileDetails = memo(function UserProfileDetails({
   userId,
 }: UserProfileDetailsProps) {
-  const { users, theme } = useAppContext()
-  const user = users.find((u) => u.id === userId)
+  const theme = useAppSelector((state) => state.theme.theme)
+  const user = useAppSelector((state) => state.users.users.find((u) => u.id === userId))
 
   if (!user) {
     return null
@@ -15,7 +15,7 @@ export const UserProfileDetails = memo(function UserProfileDetails({
   return (
     <div className={`user-profile-details user-profile-details--${theme}`}>
       <p>Роль: {user.role}</p>
-      <p>Тема успадкована через контекст: {theme}</p>
+      <p>Тема отримана з Redux-стору: {theme}</p>
     </div>
   )
 })
